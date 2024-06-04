@@ -30,6 +30,4 @@ public class SeleniumWrappers extends BaseTest{
 	public void sendKeys(By locator, String text) {
 		driver.findElement(locator).sendKeys(text);
 	}
-	
-
 }
