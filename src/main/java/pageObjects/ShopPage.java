@@ -16,6 +16,19 @@ public class ShopPage extends SeleniumWrappers{
 	}
 	
 	public By sortingList = By.name("orderby");
+	public By cookbooksLink = By.linkText("Cookbooks");
+	public By aHundredAndOneRecepiesBook = By.xpath
+			("//a[@class='hover_icon hover_icon_link' and @href='https://keybooks.ro/shop/a-hundred-and-one-receipes/']/span");
+	public By cookingWithLoveBook = By.xpath
+			("//a[@class='hover_icon hover_icon_link' and @href='https://keybooks.ro/shop/cooking-with-love/']/span");
+	public By healthyLifestyleBook = By.xpath
+			("//a[@class='hover_icon hover_icon_link' and @href='https://keybooks.ro/shop/healthy-lifestyle/']/span");
+	public By theVeganCookeryBook = By.xpath
+			("//a[@class='hover_icon hover_icon_link' and @href='https://keybooks.ro/shop/the-vegan-cookery/']");
+	public By ultimateBookOfRecipesBook = By.xpath
+			("//a[@class='hover_icon hover_icon_link' and @href='https://keybooks.ro/shop/ultimate-book-of-receipes/']/span");
+	
+	
 	
 	public void selectByValue(String value) {
 		WebElement element = driver.findElement(sortingList);
@@ -39,5 +52,25 @@ public class ShopPage extends SeleniumWrappers{
 		WebElement element = driver.findElement(sortingList);
 		Select select = new Select(element);
 		return select.getFirstSelectedOption().getText();
+	}
+	
+	public String checkIfAHundredAndOneRecepiesBookIsOnSale(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
+	public String checkIfCookingWithLoveBookIsOnSale(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
+	public String checkIfHealthyLifestyleBookIsOnSale(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
+	public String checkIfTheVeganCookeryBookIsOnSale(By locator) {
+	        return driver.findElement(locator).getText();
+	}
+	
+	public String checkIfUltimateBookOfRecipesBookIsOnSale(By locator) {
+		return driver.findElement(locator).getText();
 	}
 }

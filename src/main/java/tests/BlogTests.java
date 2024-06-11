@@ -28,5 +28,12 @@ public class BlogTests extends BaseTest{
 	public void shopTest() {
 		
 		app.click(app.menu.shopLink);
+		app.click(app.shop.cookbooksLink);
+		
+		assertEquals(app.shop.checkIfAHundredAndOneRecepiesBookIsOnSale(app.shop.aHundredAndOneRecepiesBook), "SALE!");
+		assertEquals(app.shop.checkIfCookingWithLoveBookIsOnSale(app.shop.cookingWithLoveBook), "SALE!");
+		assertEquals(app.shop.checkIfHealthyLifestyleBookIsOnSale(app.shop.healthyLifestyleBook), "SALE!");
+		assertEquals(app.shop.checkIfTheVeganCookeryBookIsOnSale(app.shop.theVeganCookeryBook), "");
+		assertEquals(app.shop.checkIfUltimateBookOfRecipesBookIsOnSale(app.shop.ultimateBookOfRecipesBook), "SALE!");
 	}
 }
