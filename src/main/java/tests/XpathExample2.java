@@ -58,7 +58,7 @@ public class XpathExample2 extends BaseTest{
 				pass);
 		pass.sendKeys("Nimic");
 		
-		//following-sibling --> selecteaza elementul de dinainte care se afla in relatie de rudenie
+		//preceding-sibling --> selecteaza elementul de dinainte care se afla in relatie de rudenie
 		//de tip frate/sora (adica e la acelasi nivel ierarhic)
 		
 		WebElement forgotPass = driver.findElement
