@@ -27,6 +27,10 @@ public class ShopPage extends SeleniumWrappers{
 			("//a[@class='hover_icon hover_icon_link' and @href='https://keybooks.ro/shop/the-vegan-cookery/']");
 	public By ultimateBookOfRecipesBook = By.xpath
 			("//a[@class='hover_icon hover_icon_link' and @href='https://keybooks.ro/shop/ultimate-book-of-receipes/']/span");
+	public By ultimateBookOfRecipesPrice = By.xpath
+			("//li[contains(@class, 'post-1705')]/descendant::ins");
+	public By stormPrice = By.xpath
+			("//li[contains(@class, 'post-256')]/descendant::span[@class='woocommerce-Price-amount amount']");
 	
 	
 	
@@ -71,6 +75,14 @@ public class ShopPage extends SeleniumWrappers{
 	}
 	
 	public String checkIfUltimateBookOfRecipesBookIsOnSale(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
+	public String checkThePriceOfUltimateBookOfRecipes(By locator) {
+		return driver.findElement(locator).getText();
+	}
+	
+	public String checkThePriceOfStorm(By locator) {
 		return driver.findElement(locator).getText();
 	}
 }
