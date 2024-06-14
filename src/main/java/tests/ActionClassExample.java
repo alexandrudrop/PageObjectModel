@@ -53,7 +53,7 @@ public class ActionClassExample extends BaseTest{
 		.perform();
 	}
 	
-	@Test
+	//@Test
 	public void sendMessageForm() {
 		
 		app.click(app.menu.contactsLink);
@@ -73,5 +73,16 @@ public class ActionClassExample extends BaseTest{
 			.sendKeys(Keys.TAB, Keys.ENTER)
 		.perform();
 
+	}
+	
+	@Test
+	public void dragAndDropExample() {
+		
+		app.click(app.menu.shopLink);
+		app.hoverElement(app.shop.filterSliderInitialPosition);
+		app.dragAndDrop(app.shop.filterSliderInitialPosition, 100, 0);
+		app.dragAndDrop(app.shop.filterSliderFinalPosition, -100, 0);
+		
+		
 	}
 }

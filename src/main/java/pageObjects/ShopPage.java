@@ -31,6 +31,8 @@ public class ShopPage extends SeleniumWrappers{
 			("//li[contains(@class, 'post-1705')]/descendant::ins");
 	public By stormPrice = By.xpath
 			("//li[contains(@class, 'post-256')]/descendant::span[@class='woocommerce-Price-amount amount']");
+	public By filterSliderInitialPosition = By.cssSelector("span[style='left: 0%;']");
+	public By filterSliderFinalPosition = By.cssSelector("span[style='left: 100%;']");
 	
 	
 	
