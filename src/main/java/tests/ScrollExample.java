@@ -9,13 +9,18 @@ import selenium.utils.BaseTest;
 
 public class ScrollExample extends BaseTest{
 	
-	//@Test
+	@Test
 	public void scrollByAmount() {
 		
 		Actions action = new Actions(driver);
 		action.scrollByAmount(0, 800).perform();
-		
 		app.scrollVertically(800);
+		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("window.scrollBy(0, 800)");
+		
+		//int x = 0;
+		//jse.executeScript("window.scrollBy(0, "+x+")");
 	}
 	
 	//@Test
@@ -23,11 +28,14 @@ public class ScrollExample extends BaseTest{
 		
 		Actions action = new Actions(driver);
 		
-		action.scrollToElement(app.getWebElement(app.home.chooseBookText)).perform();
+		//action.scrollToElement(app.getWebElement(app.home.chooseBookText)).perform();
 		//action.moveToElement(app.getWebElement(app.home.chooseBookText)).perform();	
+		
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		jse.executeScript("arguments[0].scrollIntoView()", app.getWebElement(app.home.chooseBookText));
 	}
 	
-	@Test
+	//@Test
 	public void scrollTDownOrTop() throws InterruptedException {
 		
 		Actions action = new Actions(driver);

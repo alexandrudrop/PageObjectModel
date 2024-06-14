@@ -24,6 +24,8 @@ public class MenuPage extends SeleniumWrappers{
 	public By blogLink = By.linkText("BLOG");
 	public By aboutLink = By.linkText("ABOUT");
 	public By blogSubMenuClassic = By.linkText("Classic");
+	public By searchIcon = By.cssSelector("button[title='Open search']");
+	public By searchInput = By.cssSelector("div[class='content_wrap'] input[class='search_field']");
 
 	
 	public void navigateTo(By locator) {
