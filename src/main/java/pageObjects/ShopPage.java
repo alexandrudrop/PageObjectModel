@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -33,6 +35,8 @@ public class ShopPage extends SeleniumWrappers{
 			("//li[contains(@class, 'post-256')]/descendant::span[@class='woocommerce-Price-amount amount']");
 	public By filterSliderInitialPosition = By.cssSelector("span[style='left: 0%;']");
 	public By filterSliderFinalPosition = By.cssSelector("span[style='left: 100%;']");
+    public By cookBooks = By.cssSelector("div[class='post_thumb']");
+    public By saleMark = By.cssSelector("span[class='onsale']");
 	
 	
 	
@@ -87,4 +91,9 @@ public class ShopPage extends SeleniumWrappers{
 	public String checkThePriceOfStorm(By locator) {
 		return driver.findElement(locator).getText();
 	}
+	
+    public int returnNrOfElements(By locator) { 
+        List<WebElement> elements = driver.findElements(locator);
+        return elements.size();
+   }
 }

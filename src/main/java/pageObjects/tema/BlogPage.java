@@ -22,24 +22,14 @@ public class BlogPage extends SeleniumWrappers{
 			("//span[@class='post_info_item post_info_tags']/a[@href='https://keybooks.ro/category/news/']");
 	public By categoryRecommend = By.xpath
 			("//span[@class='post_info_item post_info_tags']/a[@href='https://keybooks.ro/category/recommend/']");
+	public By audioPost = By.linkText("Audio post");
 	
 	public void searchBlog(String name) {
 		sendKeys(searchBlogField, name);
 		click(searchBlogBtn);
 	}
 	
-	public String checkCategoryClassicText(By locator) {
+	public String checkCategoryText(By locator) {
 		return driver.findElement(locator).getText();
 	}
-	
-	public String checkCategoryNewsText(By locator) {
-		return driver.findElement(locator).getText();
-	}
-	
-	public String checkCategoryRecommendText(By locator) {
-		return driver.findElement(locator).getText();
-	}
-	
-	
-
 }

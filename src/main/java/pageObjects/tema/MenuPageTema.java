@@ -21,6 +21,7 @@ public class MenuPageTema extends SeleniumWrappers{
 	public By king = By.cssSelector("h6 a[href='https://keybooks.ro/shop/the-wicked-king/']");
 	public By blogCategoryList = By.id("menu-item-76");
 	public By classicCategory = By.id("menu-item-114");
+	public By postFormatsCategory = By.id("menu-item-232");
 	
 	public void navigateTo(By locator) {
 		driver.findElement(locator).click();

@@ -29,14 +29,14 @@ public class ShippingPage extends SeleniumWrappers{
 		select.selectByValue(value);
 	}
 	
-	public String getSelectedCountryOption() {
-		WebElement element = driver.findElement(countryList);
+	public String getSelectedCountryOption(By locator) {
+		WebElement element = driver.findElement(locator);
 		Select select = new Select(element);
 		return select.getFirstSelectedOption().getText();
 	}
 	
-	public String getSelectedProvinceOption() {
-		WebElement element = driver.findElement(provinceList);
+	public String getSelectedProvinceOption(By locator) {
+		WebElement element = driver.findElement(locator);
 		Select select = new Select(element);
 		return select.getFirstSelectedOption().getText();
 	}

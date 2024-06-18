@@ -27,7 +27,7 @@ public class ShippingTest extends BaseTest{
 		
 		driver.navigate().to("https://keybooks.ro/account/edit-address/shipping/");
 		app.shipping.selectByIndex(41);
-		assertEquals(app.shipping.getSelectedCountryOption(), "Canada");
+		assertEquals(app.shipping.getSelectedCountryOption(app.shipping.countryList), "Canada");
 		
 
 	}
@@ -37,6 +37,6 @@ public class ShippingTest extends BaseTest{
 		
 		Thread.sleep(2000);
 		app.shipping.selectByValue("NL");
-		assertEquals(app.shipping.getSelectedProvinceOption(), "Newfoundland and Labrador");
+		assertEquals(app.shipping.getSelectedProvinceOption(app.shipping.provinceList), "Newfoundland and Labrador");
 	}
 }
