@@ -10,7 +10,7 @@ import selenium.utils.BaseTest;
 
 public class JavascriptExecutorExample extends BaseTest{
 	
-	@Test(priority=1)
+	//@Test(priority=1)
 	public void example1() {
 		
 		JavascriptExecutor jse = (JavascriptExecutor)driver;
@@ -76,10 +76,13 @@ public class JavascriptExecutorExample extends BaseTest{
 		System.out.println(isEnabled);
 	}
 	
-	@Test(priority=2)
+	@Test
 	public void example2() {
 		
-		String alertaJs = "window.obj = function() {}";
+		JavascriptExecutor jse = (JavascriptExecutor)driver;
+		String alertaJs = "window.obj = function() { alert ('Alerta!!!!')}; window.obj.call();";
+		jse.executeScript(alertaJs);
+		//jse.executeScript("window.obj = function() { alert ('Alerta!!!!)}; window.obj.call();");
 		
 	}
 }
