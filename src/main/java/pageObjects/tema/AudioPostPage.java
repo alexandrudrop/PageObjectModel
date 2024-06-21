@@ -12,10 +12,8 @@ public class AudioPostPage extends SeleniumWrappers{
 		this.driver = driver;
 	}
 	
-	public By musicPlayPauseBtn = By.cssSelector("div[class='mejs-button mejs-playpause-button mejs-play']");
-	public By musicTimeSliderInitialPosition = By.cssSelector("span[style*='left: 0px']");
-	public By musicTimeSliderFinalPosition = By.cssSelector("span[style*='left: 400px']");
-	public By musicVolumeSliderInitialPosition = By.cssSelector("div[style='left: 100%;']");
-	public By musicVolumeSliderFinalPosition = By.cssSelector("div[style='left: 0%;']");
+    public By musicPlayPauseBtn = By.xpath("//div[@class='mejs-button mejs-playpause-button mejs-play']");
+    public By timeSliderPosition = By.xpath("//span[@class='mejs-time-current']");
+    public By volumeSliderPosition = By.xpath("//div[@class='mejs-horizontal-volume-total']");
 
 }
