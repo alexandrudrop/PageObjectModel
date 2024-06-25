@@ -8,6 +8,7 @@ import pageObjects.ShippingPage;
 import pageObjects.ShopPage;
 import pageObjects.tema.AudioPostPage;
 import pageObjects.tema.BlogPage;
+import pageObjects.tema.GenericEventPage;
 import pageObjects.tema.MenuPageTema;
 import pageObjects.tema.RomansPage;
 import pageObjects.tema.TheWickedKingPage;
@@ -25,5 +26,6 @@ public class BasePage extends SeleniumWrappers{
 	public HomePage home = new HomePage(driver);
 	public AudioPostPage audioPost = new AudioPostPage(driver);
 	public RomansPage romans = new RomansPage(driver);
+	public GenericEventPage genericEvent = new GenericEventPage(driver);
 
 }

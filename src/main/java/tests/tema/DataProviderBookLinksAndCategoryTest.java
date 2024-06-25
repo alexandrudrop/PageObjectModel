@@ -12,7 +12,7 @@ import testdata.utils.DataProviderRomansClass;
 public class DataProviderBookLinksAndCategoryTest extends BaseTest{
 	
 	@Test(dataProviderClass=DataProviderRomansClass.class, dataProvider="booksLinkAndCategoryProvider")
-	public void assertBookLinksAndCategory(String bookLink, String bookCategory) {
+	public void assertBookLinksAndCategory(String bookLink, String bookCategory){
 		
 		app.click(app.menu.shopLink);
 		app.click(app.shop.romansLink);
@@ -20,10 +20,12 @@ public class DataProviderBookLinksAndCategoryTest extends BaseTest{
 		WebElement link = driver.findElement(By.cssSelector
 				("div[class='post_content'] a[href='https://keybooks.ro/shop/"+bookLink+"/']"));
 		assertTrue(link.isDisplayed());
+
+		link.click();
+
 		
 		WebElement category = driver.findElement(By.xpath
-				//("//div[@class='product_meta']/descendant::a[text()='"+bookCategory+"']"));
-				("//div[@class='product_meta']/descendant::a[text()='Romans']"));
+				("//div[@class='product_meta']/descendant::a[text()='"+bookCategory+"']"));
 		assertTrue(category.isDisplayed());
 		
 		
