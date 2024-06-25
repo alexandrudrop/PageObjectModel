@@ -19,6 +19,7 @@ public class ShopPage extends SeleniumWrappers{
 	
 	public By sortingList = By.name("orderby");
 	public By cookbooksLink = By.linkText("Cookbooks");
+	public By romansLink = By.linkText("Romans");
 	public By aHundredAndOneRecepiesBook = By.xpath
 			("//a[@class='hover_icon hover_icon_link' and @href='https://keybooks.ro/shop/a-hundred-and-one-receipes/']/span");
 	public By cookingWithLoveBook = By.xpath
