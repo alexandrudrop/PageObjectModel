@@ -26,6 +26,12 @@ public class MenuPage extends SeleniumWrappers{
 	public By blogSubMenuClassic = By.linkText("Classic");
 	public By searchIcon = By.cssSelector("button[title='Open search']");
 	public By searchInput = By.cssSelector("div[class='content_wrap'] input[class='search_field']");
+	public By facebookLink = By.xpath
+			("//div[@class='top_panel_top_socials']/descendant::a[@href='https://www.facebook.com/keytraining.ro']");
+	public By twitterLink = By.xpath
+			("//div[@class='top_panel_top_socials']/descendant::a[@href='https://twitter.com/']");
+	public By instagramLink = By.xpath
+			("//div[@class='top_panel_top_socials']/descendant::a[@href='https://www.instagram.com']");
 	
 	public void search(String value) {
 		
